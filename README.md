@@ -18,3 +18,9 @@ is pointed to by `mainEntity`
 
 This structure is particularly useful for projects requiring a modular approach, where the main data repository (./) can be accompanied by one or more specialized workflows or datasets
 that need to link to each others files.
+
+# o-crate-multiple-entrypoints-workflow-and-process
+
+Also shows an example on how RO-Crates could be expanded for multiple entry points.
+This shows how a workflow run can be decomposed into an entry point for the workflow RO-Crate (only the executable workflow),
+and another entry point for the process run RO-Crate representing the execution of said workflow.

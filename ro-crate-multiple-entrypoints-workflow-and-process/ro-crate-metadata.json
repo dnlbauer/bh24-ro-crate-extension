@@ -1,0 +1,183 @@
+{
+    "@context": [
+        "https://w3id.org/ro/crate/1.2-DRAFT/context",
+        {
+            "EntryPoint": "http://example.com/vocab#EntryPoint"
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "conformsTo": [
+                {
+                    "@id": "https://example.org/ro/crate/1.x-with-entrypoints"
+                }
+            ],
+            "about": [
+                {
+                    "@id": "./"
+                },
+                {
+                    "@id": "workflow-subdirectory/"
+                },
+                {
+                    "@id": "workflow-run-subdirectory/"
+                }
+            ],
+            "mainEntity": {
+                "@id": "./"
+            }
+        },
+        {
+            "@id": "./",
+            "@type": [
+                "Dataset",
+                "EntryPoint"
+            ],
+            "name": "My RO-Crate",
+            "description": "This is main entry point of an RO-Crate with a workflow as second entrypoint.",
+            "hasPart": [
+                {
+                    "@id": "dummy.txt"
+                },
+                {
+                    "@id": "workflow-subdirectory/"
+                },
+                {
+                    "@id": "workflow-subdirectory/workflow.cwl"
+                },
+                {
+                    "@id": "workflow-run-subdirectory/"
+                },
+                {
+                    "@id": "workflow-run-subdirectory/input.txt"
+                },
+                {
+                    "@id": "workflow-run-subdirectory/output.txt"
+                }
+            ],
+            "datePublished": "2024-11-06",
+            "license": {
+                "@id": "https://creativecommons.org/licenses/by/4.0/"
+            },
+            "creator": {
+                "@id": "https://orcid.org/0000-0001-9447-460X"
+            }
+        },
+        {
+            "@id": "dummy.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "workflow-subdirectory/",
+            "@type": [
+                "Dataset",
+                "EntryPoint"
+            ],
+            "conformsTo": [
+                {
+                    "@id": "https://example.com/workflowhub/workflow-ro-crate/1.0"
+                }
+            ],
+            "name": "My workflow",
+            "description": "This is a subdirectory within the RO-Crate, following the workflow-ro-crate profile standard. This represents the second entry point for the RO-Crate",
+            "hasPart": [
+                {
+                    "@id": "workflow-subdirectory/workflow.cwl"
+                }
+            ],
+            "mainEntity": {
+                "@id": "workflow-subdirectory/workflow.cwl"
+            }
+        },
+        {
+            "@id": "workflow-subdirectory/workflow.cwl",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "conformsTo": [
+                {
+                    "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE"
+                }
+            ],
+            "input": [],
+            "output": [],
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
+            }
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl",
+            "@type": "ComputerLanguage",
+            "name": "Common Workflow Language",
+            "alternateName": "CWL",
+            "identifier": {
+                "@id": "https://w3id.org/cwl/v1.2/"
+            },
+            "url": {
+                "@id": "https://www.commonwl.org/"
+            }
+        },
+        {
+            "@id": "workflow-run-subdirectory/",
+            "@type": [
+                "Dataset",
+                "EntryPoint"
+            ],
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/wfrun/process/0.4"
+                }
+            ],
+            "name": "My workflow run results",
+            "description": "This is a subdirectory within the RO-Crate, following the Process Run Crate profile standard. This represents another entry point for the RO-Crate",
+            "hasPart": [
+                {
+                    "@id": "workflow-run-subdirectory/input.txt"
+                },
+                {
+                    "@id": "workflow-run-subdirectory/input.txt"
+                }
+            ],
+            "mentions": {
+                "@id": "#createAction"
+            }
+        },
+        {
+            "@id": "#createAction",
+            "@type": "CreateAction",
+            "object": [
+                {
+                    "@id": "workflow-run-subdirectory/input.txt"
+                }
+            ],
+            "result": [
+                {
+                    "@id": "workflow-run-subdirectory/output.txt"
+                }
+            ],
+            "agent": {
+                "@id": "https://orcid.org/0000-0001-9447-460X"
+            },
+            "instrument": {
+                "@id": "workflow-subdirectory/workflow.cwl"
+            }
+        },
+        {
+            "@id": "workflow-run-subdirectory/input.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "workflow-run-subdirectory/output.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-9447-460X",
+            "@type": "Person",
+            "name": "Daniel Bauer"
+        }
+    ]
+}
