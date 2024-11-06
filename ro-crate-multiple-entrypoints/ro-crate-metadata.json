@@ -36,6 +36,9 @@
             "description": "This is main entry point of an RO-Crate with a workflow as second entrypoint.",
             "hasPart": [
                 {
+                    "@id": "dummy.txt"
+                },
+                {
                     "@id": "workflow-subdirectory/"
                 },
                 {
@@ -49,6 +52,10 @@
             "creator": {
                 "@id": "https://orcid.org/0000-0001-9447-460X"
             }
+        },
+        {
+            "@id": "dummy.txt",
+            "@type": "File"
         },
         {
             "@id": "workflow-subdirectory/",
