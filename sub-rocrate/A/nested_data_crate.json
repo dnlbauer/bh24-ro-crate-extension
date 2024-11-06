@@ -1,0 +1,71 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1" // MUST
+        }, 
+        {
+          "@id": "https://whatever.com/nested-ro-crate-profile" // MUST
+        } 
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Example RO-Crate",
+      "hasPart": [
+        {
+          "@id": "./dummy.txt"
+        }
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1" // MUST
+        }, 
+        {
+          "@id": "https://whatever.com/nested-ro-crate-profile" // MUST
+        } 
+      ],
+      "isPartOf": [
+        {
+          "@id": "../" // MUST
+        } 
+      ]
+    },
+    { // MUST
+      "@id": "../",
+      "@type": "Dataset",
+      "name": "Parent RO-Crate",
+      "hasPart": {
+        "@id": "./" // SHOULD
+      }, 
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate" // MUST
+        }
+      ]
+    },
+    {
+      "@id": "./dummy.txt",
+      "@type": "File",
+      "name": "dummy.txt",
+      "encodingFormat": "text/plain"
+    },
+    { // MUST
+      "@id": "https://whatever.com/nested-ro-crate-profile",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Nested RO-Crate Profile",
+      "version": "0.1"
+    }
+  ]
+}

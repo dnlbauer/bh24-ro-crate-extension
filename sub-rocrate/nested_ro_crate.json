@@ -1,0 +1,94 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "#ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Example RO-Crate",
+      "hasPart": [
+        {
+          "@id": "./A/"
+        },
+        {
+          "@id": "./B/"
+        }
+      ]
+    },
+    {
+      "@id": "./A/",
+      "@type": "Dataset",
+      "name": "Folder A",
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate"
+        },
+        {
+          "@id": "https://whatever.com/nested-ro-crate-profile"
+        }
+      ],
+      "isPartOf": "./",
+      "subjectOf": "./A/ro-crate-metadata.json"
+    },
+    {
+      "@id": "./A/ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "encodingFormat": "application/ld+json",
+      "sdDatePublished": "2024-08-22T23:57:03+01:00"
+    },
+    {
+      "@id": "./B/",
+      "@type": "Dataset",
+      "name": "Folder B",
+      "hasPart": {
+        "@id": "./B/test.cwl"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate" // SHOULD
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0" // MAY
+        },
+        {
+          "@id": "https://whatever.com/nested-ro-crate-profile" // MAY
+        }
+      ],
+      "isPartOf": "./", // MAY
+      "subjectOf": "./B/ro-crate-metadata.json" // MAY
+    },
+    { // MAY
+      "@id": "./B/ro-crate-metadata.json", 
+      "@type": "CreativeWork",
+      "encodingFormat": "application/ld+json",
+      "sdDatePublished": "2024-08-22T23:57:03+01:00"
+    },
+    { // MAY
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Workflow RO-Crate Profile",
+      "version": "1.0"
+    },
+    { // MAY
+      "@id": "https://whatever.com/nested-ro-crate-profile",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Nested RO-Crate Profile",
+      "version": "0.1"
+    }
+  ]
+}
