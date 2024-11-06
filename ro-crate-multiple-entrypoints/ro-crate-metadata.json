@@ -1,5 +1,10 @@
 {
-    "@context": "https://w3id.org/ro/crate/1.2/context",
+    "@context": [
+        "https://w3id.org/ro/crate/1.2/context",
+        {
+            "EntryPoint": "http://example.com/vocab#EntryPoint"
+        }
+    ],
     "@graph": [
         {
             "@id": "ro-crate-metadata.json",
@@ -21,7 +26,10 @@
         },
         {
             "@id": "./",
-            "@type": "Dataset",
+            "@type": [
+                "Dataset",
+                "EntryPoint"
+            ],
             "name": "My RO-Crate",
             "description": "This is main entry point of an RO-Crate with a workflow as second entrypoint.",
             "hasPart": [
@@ -42,7 +50,10 @@
         },
         {
             "@id": "workflow-subdirectory/",
-            "@type": "Dataset",
+            "@type": [
+                "Dataset",
+                "EntryPoint"
+            ],
             "conformsTo": {
                 "@id": "https://example.com/workflowhub/workflow-ro-crate/1.0"
             },
