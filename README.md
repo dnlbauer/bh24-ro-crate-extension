@@ -1,4 +1,4 @@
-This repository contains descriptions and examples for two possible extendsions of RO-Crate to enable the use of profiles on subdirectories of an RO-Crate while also retaining the option to link between objects in differing subdirectories.
+This repository contains descriptions and examples for two possible extensions of RO-Crate to enable the use of profiles on subdirectories of an RO-Crate while also retaining the option to link between objects in differing subdirectories.
 
 ## sub-ro-crates
 
