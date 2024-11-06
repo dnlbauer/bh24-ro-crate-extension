@@ -9,9 +9,11 @@
         {
             "@id": "ro-crate-metadata.json",
             "@type": "CreativeWork",
-            "conformsTo": {
-                "@id": "https://example.org/ro/crate/1.x-with-entrypoints"
-            },
+            "conformsTo": [
+                {
+                    "@id": "https://example.org/ro/crate/1.x-with-entrypoints"
+                }
+            ],
             "about": [
                 {
                     "@id": "./"
@@ -54,9 +56,11 @@
                 "Dataset",
                 "EntryPoint"
             ],
-            "conformsTo": {
-                "@id": "https://example.com/workflowhub/workflow-ro-crate/1.0"
-            },
+            "conformsTo": [
+                {
+                    "@id": "https://example.com/workflowhub/workflow-ro-crate/1.0"
+                }
+            ],
             "name": "My workflow",
             "description": "This is a subdirectory within the RO-Crate, following the workflow-ro-crate profile standard. This represents the second entry point for the RO-Crate",
             "hasPart": [
@@ -75,9 +79,11 @@
                 "SoftwareSourceCode",
                 "ComputationalWorkflow"
             ],
-            "conformsTo": {
-                "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE"
-            },
+            "conformsTo": [
+                {
+                    "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE"
+                }
+            ],
             "input": [],
             "output": [],
             "programmingLanguage": {
