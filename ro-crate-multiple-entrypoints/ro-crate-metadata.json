@@ -1,6 +1,6 @@
 {
     "@context": [
-        "https://w3id.org/ro/crate/1.2/context",
+        "https://w3id.org/ro/crate/1.2-DRAFT/context",
         {
             "EntryPoint": "http://example.com/vocab#EntryPoint"
         }
