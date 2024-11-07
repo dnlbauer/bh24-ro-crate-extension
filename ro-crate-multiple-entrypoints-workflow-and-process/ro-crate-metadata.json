@@ -1,9 +1,6 @@
 {
     "@context": [
-        "https://w3id.org/ro/crate/1.2-DRAFT/context",
-        {
-            "EntryPoint": "http://example.com/vocab#EntryPoint"
-        }
+        "https://w3id.org/ro/crate/1.2-DRAFT/context"
     ],
     "@graph": [
         {
@@ -11,7 +8,7 @@
             "@type": "CreativeWork",
             "conformsTo": [
                 {
-                    "@id": "https://example.org/ro/crate/1.x-with-entrypoints"
+                    "@id": "https://example.org/ro/crate/with-entrypoints"
                 }
             ],
             "about": [
@@ -77,7 +74,7 @@
             ],
             "conformsTo": [
                 {
-                    "@id": "https://example.com/workflowhub/workflow-ro-crate/1.0"
+                    "@id": "https://example.com/workflowhub/workflow-ro-crate/with-entrypoints"
                 }
             ],
             "name": "My workflow",
@@ -129,7 +126,7 @@
             ],
             "conformsTo": [
                 {
-                    "@id": "https://w3id.org/ro/wfrun/process/0.4"
+                    "@id": "https://w3id.org/ro/wfrun/process/with-entrypoints"
                 }
             ],
             "name": "My workflow run results",
