@@ -37,6 +37,19 @@ is pointed to by `mainEntity`
 This structure is particularly useful for projects requiring a modular approach, where the main data repository (./) can be accompanied by one or more specialized workflows or datasets
 that need to link to each others files.
 
+### rocrate_splitter.py
+
+The script shows how an RO-Crate with multiple entry points can be splitted into multiple atomic RO-Crates that only contain the data relevant for one entrypoint:
+
+```bash
+> ./rocrate_splitter.py ro-crate-multiple-entrypoints-workflow-and-process
+Found entrypoints:  ['file:///home/dbauer/projects/bh24-ro-crate-profiles/ro-crate-multiple-entrypoints-workflow-and-process/workflow-subdirectory/', 'file:///home/dbauer/projects/bh24-ro-crate-profiles/ro-crate-multiple-entrypoints-workflow-and-process/workflow-run-subdirectory/']
+Creating RO-Crate for  file:///home/dbauer/projects/bh24-ro-crate-profiles/ro-crate-multiple-entrypoints-workflow-and-process/workflow-subdirectory/
+Created RO-Crate at split/sub-crate1 with 1 files and 6 entities
+Creating RO-Crate for  file:///home/dbauer/projects/bh24-ro-crate-profiles/ro-crate-multiple-entrypoints-workflow-and-process/workflow-run-subdirectory/
+Created RO-Crate at split/sub-crate2 with 3 files and 10 entities
+```
+
 ## ro-crate-multiple-entrypoints-workflow-and-process
 
 Also shows an example on how RO-Crates could be expanded for multiple entry points.
