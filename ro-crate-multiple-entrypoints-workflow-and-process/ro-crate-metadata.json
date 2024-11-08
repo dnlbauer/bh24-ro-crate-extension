@@ -60,6 +60,9 @@
             },
             "creator": {
                 "@id": "https://orcid.org/0000-0001-9447-460X"
+            },
+            "author": {
+                "@id": "https://orcid.org/0000-0001-9447-460X"
             }
         },
         {
@@ -100,11 +103,19 @@
                     "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE"
                 }
             ],
-            "input": [],
-            "output": [],
             "programmingLanguage": {
                 "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
-            }
+            },
+            "input": [
+                {
+                    "@id": "#input1"
+                }
+            ],
+            "output": [
+                {
+                    "@id": "#output1"
+                }
+            ]
         },
         {
             "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl",
@@ -119,6 +130,31 @@
             }
         },
         {
+            "@id": "#input1",
+            "@type": "FormalParameter",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "additionalType": "File",
+            "name": "Input file",
+            "valueRequired": "True",
+            "workExample": {
+                "@id": "workflow-run-subdirectory/output.txt"
+            }
+        },
+        {
+            "@id": "#output1",
+            "@type": "FormalParameter",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "additionalType": "File",
+            "name": "Output file",
+            "workExample": {
+                "@id": "workflow-run-subdirectory/output.txt"
+            }
+        },
+        {
             "@id": "workflow-run-subdirectory/",
             "@type": [
                 "Dataset",
@@ -126,7 +162,10 @@
             ],
             "conformsTo": [
                 {
-                    "@id": "https://w3id.org/ro/wfrun/process/with-entrypoints"
+                    "@id": "https://w3id.org/ro/wfrun/process/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/workflow/0.1"
                 }
             ],
             "name": "My workflow run results",
@@ -136,7 +175,7 @@
                     "@id": "workflow-run-subdirectory/input.txt"
                 },
                 {
-                    "@id": "workflow-run-subdirectory/input.txt"
+                    "@id": "workflow-run-subdirectory/output.txt"
                 }
             ],
             "mentions": {
@@ -165,11 +204,17 @@
         },
         {
             "@id": "workflow-run-subdirectory/input.txt",
-            "@type": "File"
+            "@type": "File",
+            "exampleOfWork": {
+                "@id": "#input"
+            }
         },
         {
             "@id": "workflow-run-subdirectory/output.txt",
-            "@type": "File"
+            "@type": "File",
+            "exampleOfWork": {
+                "@id": "#output"
+            }
         },
         {
             "@id": "https://orcid.org/0000-0001-9447-460X",
